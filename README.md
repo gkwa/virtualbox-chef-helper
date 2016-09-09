@@ -1,0 +1,1 @@
+# virtualbox-chef-helper
