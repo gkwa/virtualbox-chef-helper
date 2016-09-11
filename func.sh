@@ -1,3 +1,5 @@
+PATH="/c/Program Files/Oracle/Virtualbox":$PATH
+
 function vmsnap()
 {
 	vm="$1"
