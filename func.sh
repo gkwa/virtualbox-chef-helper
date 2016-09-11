@@ -17,5 +17,6 @@ function restorecurrent()
 	sleep 1
 	VBoxManage snapshot $vm restorecurrent
 	sleep 1
-	VBoxHeadless --startvm $vm &
+#	VBoxHeadless --startvm $vm &
+	VBoxManage startvm --type headless $vm
 }
