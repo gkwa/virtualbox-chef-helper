@@ -1,23 +1,3 @@
-function converge()
-{
-	vm="$1"
-
-	PATH="/c/Program Files/Oracle/Virtualbox":$PATH
-
-	time {
-
-		time {
-			chef update staging-Policyfile.rb &&
-				chef push staging staging-Policyfile.rb
-		}
-
-		time knife winrm -m 127.0.0.1 \
-			 --winrm-authentication-protocol basic \
-			 --winrm-user Administrator \
-			 --winrm-password Stre@mb0x 'chef-client -l warn';
-	}
-}
-
 function vmsnap()
 {
 	vm="$1"
